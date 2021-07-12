@@ -181,9 +181,9 @@ export const projects = [
     role: `Developer 💻`,
     status: `Deployed 🚀`,
     desc: `
-    Introducing Just the Occasion - the greeting card platform!
-     Customize, share, and download greeting cards on your terms.
-     Discover a platform that values your experiences.
+    I am a Web Developer living near LA.
+    I write semantic HTML, Sassy CSS, and work with JS && Frameworks.
+    This is my portfolio (built with react).
     `,
     live_site: `https://solomonzelenko.dev/`,
     github_repo: `https://github.com/zempo/current_portfolio`,

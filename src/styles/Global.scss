@@ -1,0 +1,101 @@
+@import "config";
+
+.pg,
+header,
+.Modal,
+footer {
+  h1 {
+    text-align: center;
+    font-family: $font;
+    line-height: 1;
+    @include font-size($h1-font-sizes);
+    &.mega-header {
+      font-family: $font-2;
+      font-weight: 300;
+      margin: 1rem auto 3rem;
+      @include font-size($bigh-font-sizes);
+    }
+  }
+  h2 {
+    text-align: center;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+    font-family: $font-2;
+    @include font-size($h2-font-sizes);
+  }
+  h3 {
+    @include font-size($h3-font-sizes);
+  }
+  .hand {
+    font-family: $font-hand;
+    @include font-size($h2-font-sizes);
+    display: block;
+    @include mq("tablet") {
+      display: none;
+    }
+  }
+  p {
+    @include font-size($p-font-sizes);
+  }
+  button,
+  footer h3 {
+    font-family: $font;
+  }
+  p,
+  a,
+  figcaption,
+  h3,
+  li,
+  input,
+  textarea,
+  select {
+    font-family: $font-2;
+  }
+}
+
+.pg {
+  padding: 0;
+  margin-top: 5rem;
+  min-height: 80vh;
+  -o-animation: map-get($animations, fade-in);
+  -moz-animation: map-get($animations, fade-in);
+  -webkit-animation: map-get($animations, fade-in);
+  animation: map-get($animations, fade-in);
+  h2 {
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: lighten(map-get($colors, app-dark), 30%);
+  border: 2px none #000000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: lighten(map-get($colors, app-dark), 20%);
+}
+::-webkit-scrollbar-thumb:active {
+  background: lighten(map-get($colors, app-dark), 10%);
+}
+::-webkit-scrollbar-track {
+  background: none;
+  border: 1px none #000000;
+}
+::-webkit-scrollbar-track:hover {
+  background: none;
+}
+::-webkit-scrollbar-track:active {
+  background: none;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

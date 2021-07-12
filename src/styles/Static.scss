@@ -1,0 +1,154 @@
+@import "config";
+
+header {
+  .main-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 5;
+    background: map-get($colors, app-white);
+    box-shadow: 0px -4px 6px -5px rgba(51, 51, 51, 0.6);
+    @include mq("tablet-wide") {
+      .nav-link-list {
+        text-align: center;
+        position: relative;
+        li {
+          margin: 0.75rem calc(3rem + 2vw) !important;
+          a {
+            font-size: 20px !important;
+            svg.nav-icon {
+              width: calc(1.75rem + 1vw);
+              max-width: 2.6rem;
+              height: calc(1.75rem + 1vw);
+              max-height: 2.6rem;
+            }
+          }
+        }
+      }
+    }
+    ul {
+      list-style-type: none;
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      margin: 0.75rem auto;
+      li {
+        display: inline-block;
+        text-align: center;
+        margin: 0 calc(0.2rem + 1.25vw);
+        @include mq("phone-small") {
+          margin: 0 calc(0.4rem + 1.25vw);
+        }
+        @include mq("phone") {
+          margin: 0 calc(0.5rem + 2vw);
+          svg {
+            width: calc(1.7rem + 0.5vw);
+            height: calc(1.7rem + 0.5vw);
+          }
+        }
+        a {
+          text-decoration: none;
+          font-family: $font;
+          color: rgba(39, 39, 39, 0.582);
+          @include font-size($sub-font-sizes);
+        }
+
+        .link-active {
+          color: rgb(0, 0, 0);
+          svg,
+          .nav-icon-home path {
+            stroke: rgb(0, 0, 0);
+          }
+        }
+        svg,
+        .nav-icon-home path {
+          width: calc(1.75rem + 1vw);
+          height: calc(1.75rem + 1vw);
+          stroke: rgba(39, 39, 39, 0.582);
+        }
+      }
+    }
+  }
+}
+
+.side-nav {
+  display: none;
+  @include mq("tablet") {
+    display: block;
+  }
+  .nav-prev,
+  .nav-fwd {
+    position: fixed;
+    opacity: 0.9;
+    text-decoration: none;
+    color: map-get($colors, app-dark);
+    background: map-get($colors, app-white);
+    border-radius: 50%;
+    &:hover,
+    &:active {
+      opacity: 1;
+    }
+    svg {
+      height: calc(2rem + 2vw);
+      width: calc(2rem + 2vw);
+      @include mq("tablet-wide") {
+        height: calc(2rem + 3vw);
+        width: calc(2rem + 3vw);
+      }
+    }
+  }
+  .nav-prev {
+    top: calc(45vh - 5rem);
+    left: 5rem;
+    svg {
+      position: relative;
+      left: -5px;
+    }
+  }
+  .nav-fwd {
+    top: calc(45vh - 5rem);
+    right: 5rem;
+    svg {
+      position: relative;
+      left: 5px;
+    }
+  }
+}
+
+.app-footer {
+  background: map-get($colors, app-dark);
+  color: map-get($colors, app-white);
+  text-align: center;
+  padding: 3rem 0 11rem;
+  .social-nav {
+    margin: 2rem auto 4rem;
+    ul {
+      list-style-type: none;
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      max-width: 950px;
+      li {
+        display: inline-block;
+        text-align: center;
+        width: 20%;
+        a {
+          svg {
+            height: calc(2rem + 2vw);
+            width: calc(2rem + 2vw);
+          }
+        }
+      }
+    }
+  }
+  h3 {
+    @include font-size($h3-font-sizes);
+    margin-bottom: 3.5rem;
+  }
+  p {
+    @include font-size($sub-font-sizes);
+    font-style: italic;
+    opacity: 0.75;
+  }
+}

@@ -41,11 +41,15 @@ header {
           margin: 0 calc(0.4rem + .5vw);
         }
         @include mq("phone-wide") {
-          margin: 0 calc(0.5rem + 2vw);
+          margin: 0 calc(0.5rem + .5vw);
           svg {
             width: calc(1.7rem + 0.5vw);
             height: calc(1.7rem + 0.5vw);
           }
+        }
+        @include mq("phablet") {
+          margin: 0 calc(0.5rem + 2vw);
+
         }
         a {
           text-decoration: none;

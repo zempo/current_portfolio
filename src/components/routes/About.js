@@ -171,8 +171,9 @@ export const About = () => {
         </p>
         <p>
           I also happen to be an avid adventurer, baker, and voiceover artist.
-          Since receiving the Pfizer vaccine, you can catch me exploring LA,
-          trying new recipes, and living a healthy lifestyle.
+          In my spare time, you can catch me exploring LA, sharing new recipes with my friends,
+           and living a healthy lifestyle.
+          Please feel free to reach out through any of the links below.
         </p>
       </article>
     </section>

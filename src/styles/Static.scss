@@ -36,9 +36,9 @@ header {
       li {
         display: inline-block;
         text-align: center;
-        margin: 0 calc(0.2rem + 1vw);
+        margin: 0 calc(0.2rem + .5vw);
         @include mq("phone-small") {
-          margin: 0 calc(0.4rem + 1vw);
+          margin: 0 calc(0.4rem + .5vw);
         }
         @include mq("phone-wide") {
           margin: 0 calc(0.5rem + 2vw);
@@ -63,8 +63,8 @@ header {
         }
         svg,
         .nav-icon-home path {
-          width: calc(1.75rem + 1vw);
-          height: calc(1.75rem + 1vw);
+          width: calc(1.75rem + .5vw);
+          height: calc(1.75rem + .5vw);
           stroke: rgba(39, 39, 39, 0.582);
         }
       }
